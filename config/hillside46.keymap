@@ -32,6 +32,19 @@
   };
    
 / {
+        macros {
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+
         combos {
                 compatible = "zmk,combos";
                       
@@ -56,7 +69,7 @@
                 COMBO(nine, &kp N9, 8 18)
                 COMBO(zero, &kp N0, 9 19)
         };
-        
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -87,7 +100,7 @@
  *                                 |  GUI  |  ALT  |SK SHFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |
  */
                         bindings = <
-&kp  SLASH    &kp  TABKEY      &kp  COMMA    &kp  DOT      &kp  P        &kp  Y                                                                         &kp  F        &kp  G        &kp  C        &kp  R        &kp  L        &kp  BSPC
+&zed_em_kay    &kp  SQT      &kp  COMMA    &kp  DOT      &kp  P        &kp  Y                                                                         &kp  F        &kp  G        &kp  C        &kp  R        &kp  L        &kp  BSPC
 &kp  TAB      &kp  A        &kp  O        &kp  E        &kp  U        &kp  I                                                                         &kp  D        &kp  H        &kp  T        &kp  N        &kp  S        &kp  ENTER
 &kp  LCTRL    &kp  SEMI     &kp  Q        &kp  J        &kp  K        &kp  X        &kp  ESC                                           &caps_word    &kp  B        &kp  M        &kp  W        &kp  V        &kp  Z        &kp  SLASH
                                                         &kp  LGUI     &kp  LALT     &sk  LSHIFT    &mo  NAV_L            &mo  SYM_L    &kp  SPACE    &kp  LALT     &kp  RGUI
