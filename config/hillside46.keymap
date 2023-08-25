@@ -33,9 +33,9 @@
 
 #define MACRO(NAME, BINDINGS) \
   macro_##NAME { \
-    label = "ZM_"NAME;
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
+    label = "ZM_"NAME; \
+    compatible = "zmk,behavior-macro"; \
+    #binding-cells = <0>; \
     bindings = BINDINGS \
   };
    
