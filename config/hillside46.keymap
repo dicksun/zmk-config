@@ -50,7 +50,7 @@
                 bindings
                         = <&macro_press &kp LSHFT>, <&macro_tap &kp Z &kp M &kp K>, <&macro_release &kp LSHFT>;
                 };
-                MACRO(zmk, "<&macro_press &kp LSHFT>, <&macro_tap &kp Z &kp M &kp K>, <&macro_release &kp LSHFT>")
+                MACRO(zmk, <&macro_tap &kp Z &kp M &kp K>)
         };
 
         combos {
