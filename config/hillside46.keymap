@@ -36,21 +36,21 @@
     label = "ZM_"NAME; \
     compatible = "zmk,behavior-macro"; \
     #binding-cells = <0>; \
-    bindings = BINDINGS \
+    bindings = <BINDINGS> \
   };
    
    
 / {
         macros {
                 compatible = "zmk,behavior-macro";
-                zed_em_kay: zed_em_kay {
-                label = "ZM_zed_em_kay";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                        = <&macro_press &kp LSHFT>, <&macro_tap &kp Z &kp M &kp K>, <&macro_release &kp LSHFT>;
-                };
-                MACRO(zmk, <&macro_tap &kp Z &kp M &kp K>)
+                // zed_em_kay: zed_em_kay {
+                // label = "ZM_zed_em_kay";
+                // compatible = "zmk,behavior-macro";
+                // #binding-cells = <0>;
+                // bindings
+                //         = <&macro_press &kp LSHFT>, <&macro_tap &kp Z &kp M &kp K>, <&macro_release &kp LSHFT>;
+                // };
+                MACRO(zmk, &macro_tap &kp Z &kp M &kp K)
         };
 
         combos {
