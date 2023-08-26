@@ -43,7 +43,7 @@
         macros {
                 compatible = "zmk,behavior-macro";
              
-                MACRO(zmk, &macro_tap &kp Z &kp M &kp K)
+                MACRO(zmk, &kp K)
         };
 
         keymap {
